@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Post a Room – BoardNear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="post">
+<header><div class="wrap bar">
+<a class="logo" href="index.html"><i></i>BoardNear</a>
+<nav id="nav" aria-label="Main"><a href="find.html">Find a Room</a><a href="post.html" aria-current="page">Post a Room</a><a href="index.html#how">How it works</a></nav>
+<div id="auth"></div>
+<button class="ib" id="theme" aria-label="Switch light or dark mode">☾</button>
+<button class="ib" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main><section><div class="wrap">
+ <div class="head"><h2>Landlord: Post a Room</h2><span class="meta">Your room shows on the map right after you post it.</span></div>
+ <div class="gate" id="gate" style="display:none"><h3>Sign in to post a room</h3><p>Only logged-in landlords can post and delete their own listings.</p><a class="btn pri" href="login.html?next=post.html" style="margin-top:16px">Login</a></div>
+ <form class="post" id="postForm" novalidate>
+  <label>Boarding house name<input type="text" id="pName" placeholder="e.g. Sampaguita Boarding House"></label>
+  <label>Location<input type="text" id="pLoc" placeholder="Fills in when you tap the map (you can edit it)"></label>
+  <div>
+   <div class="lbl">Pin the boarding house on the map</div>
+   <div class="pickmap"><div id="pick"></div></div>
+   <p class="meta" id="pickInfo">Tap the map where your boarding house is. You can drag the pin to adjust it.</p>
+   <button type="button" class="btn" id="useMe">Use my current location</button>
+  </div>
+  <label>Price per month (₱)<input type="number" id="pPrice" min="0" step="50" placeholder="1500"></label>
+  <div class="row"><label><input type="checkbox" id="pWifi"> WiFi</label><label><input type="checkbox" id="pBath"> Private bathroom</label></div>
+  <label>Photo<div class="drop" id="drop" tabindex="0" role="button">Upload photo</div></label>
+  <input type="file" id="pFile" accept="image/*" hidden>
+  <p class="err" id="pErr" role="alert"></p>
+  <button class="btn pri" type="submit" style="justify-self:end">Post Room</button>
+ </form>
+</div></section></main>
+
+<footer><div class="wrap">BoardNear · Map data © OpenStreetMap contributors.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Messages – BoardNear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="messages">
+<header><div class="wrap bar">
+<a class="logo" href="index.html"><i></i>BoardNear</a>
+<nav id="nav" aria-label="Main"><a href="find.html">Find a Room</a><a href="post.html">Post a Room</a><a href="index.html#how">How it works</a></nav>
+<div id="auth"></div>
+<button class="ib" id="theme" aria-label="Switch light or dark mode">☾</button>
+<button class="ib" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main><section><div class="wrap">
+ <div class="head"><h2>Messages</h2><span class="meta">Questions from people who want to rent your rooms.</span></div>
+ <div class="msgs" id="msgList"></div>
+</div></section></main>
+
+<footer><div class="wrap">BoardNear · Map data © OpenStreetMap contributors.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

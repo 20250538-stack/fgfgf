@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Login – BoardNear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+<header><div class="wrap bar">
+<a class="logo" href="index.html"><i></i>BoardNear</a>
+<nav id="nav" aria-label="Main"><a href="find.html">Find a Room</a><a href="post.html">Post a Room</a><a href="index.html#how">How it works</a></nav>
+<div id="auth"></div>
+<button class="ib" id="theme" aria-label="Switch light or dark mode">☾</button>
+<button class="ib" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></header>
+
+<main><section><div class="wrap">
+ <div class="authcard" id="authCard">
+  <a class="logo" href="index.html"><i></i>BoardNear</a>
+  <h1 id="aTitle">Login</h1>
+  <p class="sub" id="aSub"></p>
+  <form id="authForm" novalidate>
+   <label id="fName" hidden>Full Name<input type="text" id="aName" autocomplete="name"></label>
+   <label>Email Address<input type="email" id="aEmail" autocomplete="email" inputmode="email"></label>
+   <label><span id="passLbl">Password</span><span class="pw"><input type="password" id="aPass" autocomplete="current-password"><button type="button" class="eye" id="aEye" aria-label="Show password">👁</button></span></label>
+   <label id="fConf" hidden>Confirm Password<input type="password" id="aConf" autocomplete="new-password"></label>
+   <label class="rem" id="fRem"><input type="checkbox" id="aRem"> Remember Me</label>
+   <p class="meta" id="aNote" hidden>This demo resets passwords for accounts made on this device only.</p>
+   <p class="err" id="aErr" role="alert"></p>
+   <button class="btn pri full" id="aBtn" type="submit">Log In</button>
+  </form>
+  <p class="forgot" id="forgotRow"><a href="#" data-mode="forgot">Forgot Your Password?</a></p>
+  <div id="gWrap"><div class="or"><span>or</span></div><div id="gBtn"></div></div>
+ </div>
+</div></section></main>
+
+<footer><div class="wrap">BoardNear · Map data © OpenStreetMap contributors.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
